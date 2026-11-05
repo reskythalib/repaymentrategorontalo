@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Repayment Rate Regional Gorontalo</title>
+  
+  <!-- FAVICON TAB BROWSER: LOGO AMARTHA LATAR BELAKANG PUTIH (Seperti Tab Gemini) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ffffff'/%3E%3Cg transform='translate(50, 50) scale(0.68)'%3E%3Ccircle cx='0' cy='-44' r='6.2' fill='%23732082'/%3E%3Ccircle cx='31' cy='-31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='44' cy='0' r='6.2' fill='%23732082'/%3E%3Ccircle cx='31' cy='31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='0' cy='44' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-31' cy='31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-44' cy='0' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-31' cy='-31' r='6.2' fill='%23732082'/%3E%3Cpath d='M -6 -38 C -18 -38 -28 -28 -28 -16 C -28 -26 -38 -28 -38 -10 C -38 -2 -28 0 -20 6 C -28 14 -38 18 -38 28 C -38 38 -26 38 -16 28 C -10 36 -2 38 6 38 C 18 38 28 28 28 16 C 28 26 38 28 38 10 C 38 2 28 0 20 -6 C 28 -14 38 -18 38 -28 C 38 -38 26 -38 16 -28 C 10 -36 2 -38 -6 -38 Z' fill='%23732082'/%3E%3Ccircle cx='0' cy='0' r='21' fill='%23ffffff'/%3E%3Ctext x='0' y='8' text-anchor='middle' font-family='system-ui, -apple-system, sans-serif' font-weight='800' font-size='27' fill='%23732082'%3Ea%3C/text%3E%3C/g%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ffffff'/%3E%3Cg transform='translate(50, 50) scale(0.68)'%3E%3Ccircle cx='0' cy='-44' r='6.2' fill='%23732082'/%3E%3Ccircle cx='31' cy='-31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='44' cy='0' r='6.2' fill='%23732082'/%3E%3Ccircle cx='31' cy='31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='0' cy='44' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-31' cy='31' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-44' cy='0' r='6.2' fill='%23732082'/%3E%3Ccircle cx='-31' cy='-31' r='6.2' fill='%23732082'/%3E%3Cpath d='M -6 -38 C -18 -38 -28 -28 -28 -16 C -28 -26 -38 -28 -38 -10 C -38 -2 -28 0 -20 6 C -28 14 -38 18 -38 28 C -38 38 -26 38 -16 28 C -10 36 -2 38 6 38 C 18 38 28 28 28 16 C 28 26 38 28 38 10 C 38 2 28 0 20 -6 C 28 -14 38 -18 38 -28 C 38 -38 26 -38 16 -28 C 10 -36 2 -38 -6 -38 Z' fill='%23732082'/%3E%3Ccircle cx='0' cy='0' r='21' fill='%23ffffff'/%3E%3Ctext x='0' y='8' text-anchor='middle' font-family='system-ui, -apple-system, sans-serif' font-weight='800' font-size='27' fill='%23732082'%3Ea%3C/text%3E%3C/g%3E%3C/svg%3E">
+  
+  <meta name="theme-color" content="#09090b">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background-color: #09090b;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* IFRAME FULLSCREEN MURNI */
+    #appFrame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      border: 0;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      display: block;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+
+    /* SPLASH SCREEN LATAR BELAKANG HITAM */
+    #splashScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      z-index: 9999;
+      background-color: #070709;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ANIMASI LOGO & GLOW */
+    @keyframes pulseGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.35));
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 28px rgba(192, 132, 252, 0.65));
+        transform: scale(1.015);
+      }
+    }
+
+    .splash-logo {
+      animation: pulseGlow 2.4s ease-in-out infinite;
+      max-width: 440px;
+      width: 88vw;
+      height: auto;
+    }
+
+    /* PROGRESS BAR */
+    .progress-container {
+      width: 220px;
+      max-width: 70vw;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      margin-top: 32px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #7e22ce, #c084fc, #e879f9);
+      border-radius: 999px;
+      animation: fillProgress 1.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fillProgress {
+      0% { width: 5%; }
+      40% { width: 55%; }
+      80% { width: 85%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================== -->
+  <!-- 1. SPLASH SCREEN (LATAR HITAM + LOGO REPAYMENT RATE)     -->
+  <!-- ======================================================== -->
+  <div id="splashScreen">
+    <svg class="splash-logo" viewBox="0 0 490 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Motif Rosette Komunitas Amartha (Tema Gelap) -->
+      <g transform="translate(68, 70)">
+        <circle cx="0" cy="-46" r="6" fill="#8d32a8" />
+        <circle cx="32.5" cy="-32.5" r="6" fill="#8d32a8" />
+        <circle cx="46" cy="0" r="6" fill="#8d32a8" />
+        <circle cx="32.5" cy="32.5" r="6" fill="#8d32a8" />
+        <circle cx="0" cy="46" r="6" fill="#8d32a8" />
+        <circle cx="-32.5" cy="32.5" r="6" fill="#8d32a8" />
+        <circle cx="-46" cy="0" r="6" fill="#8d32a8" />
+        <circle cx="-32.5" cy="-32.5" r="6" fill="#8d32a8" />
+
+        <!-- Cincin Ikatan -->
+        <path d="M -6 -40 C -18 -40 -30 -30 -30 -18 C -30 -28 -40 -30 -40 -12 C -40 -3 -30 0 -22 6 C -30 14 -40 18 -40 30 C -40 40 -28 40 -18 30 C -12 38 -2 40 6 40 C 18 40 30 30 30 18 C 30 28 40 30 40 12 C 40 3 30 0 22 -6 C 30 -14 40 -18 40 -30 C 40 -40 28 -40 18 -30 C 12 -38 2 -40 -6 -40 Z" fill="#782294" />
+        <path d="M 0 -28 C -10 -22 -16 -12 -16 0 C -16 12 -10 22 0 28 C 10 22 16 12 16 0 C 16 -12 10 -28 0 -28 Z" fill="#9d3bbb" opacity="0.4" />
+        <path d="M -28 0 C -22 10 -12 16 0 16 C 12 16 22 10 28 0 C 22 -10 12 -16 0 -16 C -12 -16 -22 -10 -28 0 Z" fill="#9d3bbb" opacity="0.4" />
+        <circle cx="0" cy="0" r="10" fill="#070709" />
+        <path d="M 0 -15 C 3 -6 6 -3 15 0 C 6 3 3 6 0 15 C -3 6 -6 3 -15 0 C -6 -3 -3 -6 0 -15 Z" fill="#8d32a8" />
+      </g>
+
+      <!-- Garis Pemisah Ungu -->
+      <line x1="134" y1="26" x2="134" y2="108" stroke="#8d32a8" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Teks Tipografi Logo Ungu Terang -->
+      <text x="150" y="60" fill="#a442bf" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="29" letter-spacing="-0.5">Repayment Rate</text>
+      <text x="150" y="93" fill="#9536b1" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="25" letter-spacing="-0.2">Regional Gorontalo</text>
+
+      <!-- Garis Lengkungan Elegan Bawah -->
+      <path d="M 152 104 Q 285 119 462 104 Q 285 113 152 104 Z" fill="#8d32a8" />
+    </svg>
+
+    <!-- Indikator Bar Loading Tipis -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================== -->
+  <!-- 2. IFRAME MURNI FULLSCREEN (GOOGLE APPS SCRIPT)          -->
+  <!-- ======================================================== -->
+  <iframe 
+    id="appFrame"
+    src="https://script.google.com/a/macros/amartha.com/s/AKfycbwhDCY3aA9uEV6oQOCCFD2m9afNYL93eBg2YlpqrO6nXGzYNTEZ5jn3pP8PEmWZ5c8i7A/exec"
+    allow="accelerometer; autoplay; camera; clipboard-write; clipboard-read; encrypted-media; fullscreen; geolocation; gyroscope; microphone"
+    sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+    onload="hideSplashScreen()"
+    title="Repayment Rate Regional Gorontalo">
+  </iframe>
+
+
+  <!-- ======================================================== -->
+  <!-- 3. LOGIKA TRANSISI KELUAR SPLASH SCREEN                  -->
+  <!-- ======================================================== -->
+  <script>
+    const splash = document.getElementById('splashScreen');
+    let isHidden = false;
+
+    function hideSplashScreen() {
+      if (isHidden) return;
+      isHidden = true;
+
+      // Beri sedikit jeda animasi agar transisi halus
+      setTimeout(() => {
+        splash.style.opacity = '0';
+        splash.style.pointerEvents = 'none';
+
+        setTimeout(() => {
+          splash.style.display = 'none';
+        }, 500);
+      }, 500);
+    }
+
+    // Fallback otomatis: splash screen hilang maksimal setelah 2.2 detik
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        hideSplashScreen();
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
